@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--My CSS and JS-->
+    <link rel="stylesheet" href="tracker.css">
+    <script async src="tracker.js"></script>
+    <title>JoJoDnD Ultimate Tracker</title>
+  </head>
+  <!--Thanks to Kyler and Maggy for your feedback and for making the website and the module respectfully.-->
+<!--Thanks Kyler for stat code-->
+  <body class="body">
+    <nav class="navbar" id="flexNav">
+
+      <div>
+        <a href="https://www.jojodnd.com/" class="nav-link">
+
+          <img src="icon.webp" id="home-logo" alt="home_link">
+        </a>
+      </div>
+
+
+      <p style="color:mediumpurple;" class="display-heading h6 center" id="navTitle">
+        Sandman's Ultimate Tracker
+      </p>
+
+    </nav>
+    <h2 class="display-title center">
+      Sandman's Ultimate Tracker
+    </h2>
+    <div class="content">
+      <h4 class="display-heading">
+        _____ times per Long Rest Abilities
+      </h4>
+      <div class="toggleFlex">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Exemplar
+          </label>
+        </div>
+        <div class="btn-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+              Fortune Teller
+            </label>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Fleeting Invulberability
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Hypnosis
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Regenerative Surge
+          </label>
+        </div>
+        <div class="btn-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+              Space Ripper Stingy Eyes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h4 class="display-heading">_____ times per Short Rest Abilities</h4>
+      <div class="toggleFlex">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Catlike Agility
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Level Headed
+          </label>
+        </div>
+        <div class="btn-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="">
+            <label class="form-check-label" for="">
+              Improved Slippery
+            </label>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Instant Swap
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Recovery Breathing
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Rejuvenation
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h4 class="display-heading">
+        PB Abilities
+      </h4>
+      <select class="form-select bg-warning PBSelect" aria-label="Default select example">
+        <option value="2">+2</option>
+        <option value="3">+3</option>
+        <option value="4">+4</option>
+        <option value="5">+5</option>
+        <option value="6">+6</option>
+      </select>
+      <div class="toggleFlex">
+        <div id="heavySleeper"></div>
+        <div id="improvise"></div>
+        <div id="motivated"></div>
+        <div id="luck"></div>
+        <div id="subtle"></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h4 class="display-heading">
+        Stat Abilities
+      </h4>
+      <p>
+        <i><small><b>*Note:</b> if the mod is lower than +1 put it as +1</small></i>
+      </p>
+      <select class="form-select bg-warning strSelect" aria-label="Default select example">
+        <option value="1">+1 Strength Modifier</option>
+        <option value="2">+2 Strength Modifier</option>
+        <option value="3">+3 Strength Modifier</option>
+        <option value="4">+4 Strength Modifier</option>
+        <option value="5">+5 Strength Modifier</option>
+        <option value="6">+6 Strength Modifier</option>
+        <option value="7">+7 Strength Modifier</option>
+        <option value="8">+8 Strength Modifier</option>
+        <option value="9">+9 Strength Modifier</option>
+        <option value="10">+10 Strength Modifier</option>
+      </select>
+      <select class="form-select bg-warning conSelect" aria-label="Default select example">
+        <option value="1">+1 Constitution Modifier</option>
+        <option value="2">+2 Constitution Modifier</option>
+        <option value="3">+3 Constitution Modifier</option>
+        <option value="4">+4 Constitution Modifier</option>
+        <option value="5">+5 Constitution Modifier</option>
+        <option value="6">+6 Constitution Modifier</option>
+        <option value="7">+7 Constitution Modifier</option>
+        <option value="8">+8 Constitution Modifier</option>
+        <option value="9">+9 Constitution Modifier</option>
+        <option value="10">+10 Constitution Modifier</option>
+      </select>
+      <select class="form-select bg-warning chaSelect" aria-label="Default select example">
+        <option value="1">+1 Charisma Modifier</option>
+        <option value="2">+2 Charisma Modifier</option>
+        <option value="3">+3 Charisma Modifier</option>
+        <option value="4">+4 Charisma Modifier</option>
+        <option value="5">+5 Charisma Modifier</option>
+        <option value="6">+6 Charisma Modifier</option>
+        <option value="7">+7 Charisma Modifier</option>
+        <option value="8">+8 Charisma Modifier</option>
+        <option value="9">+9 Charisma Modifier</option>
+        <option value="10">+10 Charisma Modifier</option>
+      </select>
+
+      <div class="toggleFlex">
+
+
+        <div id="rush"></div>
+        <div id="sprint"></div>
+        <div id="freeze"></div>
+        <div id="repair"></div>
+        <div id="commentator">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="SECalc">
+      <h4 class="display-heading">
+        Stand Energy Tracker
+      </h4>
+      <div class="btn-group">
+        <input id="currentSE" class="bg-warning" type="text" placeholder="Enter Stand Energy" value="10">
+        <button type="button" class="btn btn-warning" onclick="countUp()">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown()">-</button>
+      </div>
+      <ul>
+        <li>Custom Ability (1 SE)</li>
+        <li>Special Ability (2 SE)</li>
+        <li>Ultimate Ability (5 SE)</li>
+        <li>Requiem Ability (3 SE)</li>
+        <li>Heavenly Ability (50 SE or 10SE)</li>
+
+      </ul>
+    </div>
+    <div class="content">
+      <h4 class="display-heading">
+        Ripple Energy Tracker
+      </h4>
+      <ul class="listtt">
+        <div id="Recover"></div>
+        <li>Ripple Perception (1)</li>
+        <li>Ripple Posession (3)</li>
+        <li>Ripple Pressure (1)</li>
+        <li>Rippling Weapon (1)</li>
+        <li>Scarlet Overdrive (2)</li>
+        <li>Sendo Overdrive (1)</li>
+        <li>Sunlight Yellow Overdrive (2)</li>
+        <li>Zoom Punch (1)</li>
+      </ul>
+      <div id="Ripple" class="contentz"></div>
+      <div class="btn-group">
+        <select class=" riplevelSelect form-select bg-warning">
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+          <option value="4">Level 4</option>
+          <option value="5">Level 5</option>
+          <option value="6">Level 6</option>
+          <option value="7">Level 7</option>
+          <option value="8">Level 8</option>
+          <option value="9">Level 9</option>
+          <option value="10">Level 10</option>
+          <option value="11">Level 11</option>
+          <option value="12">Level 12</option>
+          <option value="13">Level 13</option>
+          <option value="14">Level 14</option>
+          <option value="15">Level 15</option>
+          <option value="16">Level 16</option>
+          <option value="17">Level 17</option>
+          <option value="18">Level 18</option>
+          <option value="19">Level 19</option>
+          <option value="20">Level 20</option>
+
+        </select> <button type="button" class="btn btn-warning" id="RipAdd">+</button>
+        <button type="button" class="btn btn-warning" id="RipSub">-</button>
+      </div>
+      <ul>
+        <li>Conductor Shield (1)</li>
+        <li>Custom Ripple Ability (Varies)</li>
+        <li>Deep Pass Overdrive (All)</li>
+        <li>Healing Ripple (1)</li>
+        <li>Life Magnetism (1)</li>
+        <li>Perfected Ripple (15)</li>
+      </ul>
+
+
+    </div>
+    <div class="content">
+      <h4 class="display-heading">
+        Grudge Point Tracker
+      </h4>
+
+      <div class="btn-group">
+        <input id="currentGrudge" class="bg-warning" type="text" placeholder="Enter Grudge Points" value="1">
+        <button type="button" class="btn btn-warning" onclick="countUp3()">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown3()">-</button>
+      </div>
+      <ul>
+        <li>1 Point: You may use the Attack Action on your Turn, summon your Stand to assist you with a single Skill Check, use your Stand Ability once, or summon it to take hits and assist you with Saving Throws, until the start of your next Turn.</li>
+        <li>3 Points: You may summon your Stand in its entirety for one Turn.</li>
+        <li>5 Points: You may summon your Stand in its entirety for an amount of Turns equal to your level in Revenge-Type (minimum of 2). If you do not gain any more Grudge Points on a given Turn, your remaining Grudge Points persist for an amount of Turns equal to your level in Revenge-Type, or until spent (minimum of 2).</li>
+      </ul>
+    </div>
+    <div id="Calc" class="content">
+      <h4 id="Vamp" class="display-heading"><a id="2"></a>
+        Vampire Energy Calculator</h4>
+      <div id="VampireCalc" class="contentz"></div>
+      <div class="bg-warning btn-group">
+        <select class=" levelSelect form-select bg-warning">
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+          <option value="4">Level 4</option>
+          <option value="5">Level 5</option>
+          <option value="6">Level 6</option>
+          <option value="7">Level 7</option>
+          <option value="8">Level 8</option>
+          <option value="9">Level 9</option>
+          <option value="10">Level 10</option>
+          <option value="11">Level 11</option>
+          <option value="12">Level 12</option>
+          <option value="13">Level 13</option>
+          <option value="14">Level 14</option>
+          <option value="15">Level 15</option>
+          <option value="16">Level 16</option>
+          <option value="17">Level 17</option>
+          <option value="18">Level 18</option>
+          <option value="19">Level 19</option>
+          <option value="20">Level 20</option>
+
+        </select>
+        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">Get Energy</button>
+        <ul class="dropdown-menu">
+
+          <li class="dropdown-item"><button type="button" id="addOne" class="btn btn-warning">(+1)</button></li>
+          <li class="dropdown-item"><button type="button" id="addTwo" class="btn btn-warning">Leave conscius (+2)</button></li>
+          <li class="dropdown-item"><button type="button" id="addFour" class="btn btn-warning">Knock out (+4)</button></li>
+          <li class="dropdown-item"><button type="button" id="addTen" class="btn btn-warning">Kill (+10)</button></li>
+        </ul>
+        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">Use Energy</button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><button id="subOne" class="btn btn-warning">Graft Skip One turn (-1) </button></li>
+          <li class="dropdown-item"><button id="subTwo" class="btn btn-warning">Yearly Vampiric Dormancy Cost (-2)</button></li>
+          <li class="dropdown-item"><button id="subTen" class="btn btn-warning">Monthly Cost or Make a Ghoul (-10)</button></li>
+          <li class="dropdown-item"><button id="subTwenty" class="btn btn-warning">Flesh Bud (-20)</button></li>
+          <li class="dropdown-item"><button id="subHundred" class="btn btn-warning">Faster Ghoul Creation or Skip 1 year of Flesh Grafting form Ripple User (-100)</button></li>
+          <li class="dropdown-item"><button id="makeVamp" class="btn btn-warning">Make a Vampire (-250)</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h4 class="display-heading">
+        Hit Points, Damage Reduction, and Scarflesh Tracker
+      </h4>
+      <div id="healthText">
+        <ul>
+          <li>Hit Points is hit dice + constitution Modifier</li>
+          <li>Stand damage reduction = Durability modifier. Can only effect stand damage.</li>
+          <li>You gain Damage Reduction equal to twice your Constitution Modifier at the top of Initiative every round. This Damage Reduction doesn't conflict with Stand Damage Reduction, and unlike Stand DR, applies on any hit.</li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <input id="currentHealth" class="bg-warning center" type="text" placeholder="Enter Hit Points" value="10">
+        <button type="button" class="btn btn-warning" onclick="countUp4()">+ (Health)</button>
+        <button type="button" class="btn btn-warning" onclick="countDown4()">- (Health)</button>
+      </div>
+      <div class="btn-group">
+        <input id="currentDR" class="bg-warning center" type="text" placeholder="Enter Stand Damage Reduction" value="1">
+        <button type="button" class="btn btn-warning" onclick="countUp5()">+ (Damge Reduction)</button>
+        <button type="button" class="btn btn-warning" onclick="countDown5()">- (Damge Reduction)</button>
+      </div>
+      <div class="btn-group">
+        <input id="currentScarflesh" class="bg-warning center" type="text" placeholder="Enter Scarflesh" value="1">
+        <button type="button" class="btn btn-warning" onclick="countUp6()">+ (Scarflesh)</button>
+        <button type="button" class="btn btn-warning" onclick="countDown6()">- (Scarflesh)</button>
+      </div>
+      <div id="Scarflesh"></div>
+
+    </div>
+
+    <div class="content">
+      <h4 class="display-heading">
+        Inspiration
+      </h4>
+      <div class="btn-group" id="inspiration">
+
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
