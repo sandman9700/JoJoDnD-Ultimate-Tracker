@@ -29,12 +29,15 @@ function updatePB() {
     motivated = "",
     luck = "",
     subtle = "";
+    
+  var checksWhole = getChecks(PB);
+  var checksHalf = getChecks(Math.floor(PB / 2));
 
-  heavySleeper += "<p>" + Math.floor(PB / 2) + " Heavy Sleeper uses</p>"
-  improvise += "<p>" + PB + " Improvised Healing uses</p>"
-  motivated += "<p>" + Math.floor(PB / 2) + " Motivated uses</p>"
-  luck += "<p>" + Math.floor(PB / 2) + " Stroke of Luck uses</p>"
-  subtle += "<p>" + PB + " Subtle Assistance uses</p>"
+  heavySleeper += checksHalf + "<span>Heavy Sleeper uses</span>"
+  improvise += checksWhole + "<span>Improvised Healing uses</span>"
+  motivated += checksHalf + "<span>Motivated uses</span>"
+  luck += checksHalf + "<span>Stroke of Luck uses</span>"
+  subtle += checksWhole + "<span>Subtle Assistance uses</span>"
 
   $("#heavySleeper").html(heavySleeper);
   $("#improvise").html(improvise);
@@ -49,8 +52,10 @@ function updateStr () {
 var rush = "",
 sprint = "";
 
-rush = "<p>" + Str + " Adrenaline Rushes left/Long Rest (Strength Mod)</p>"
-sprint = "<p>" + Str + " Veteran Sprinter uses left/Short Rest (Strength Mod)</p>"
+var checks = getChecks(Str);
+
+rush = checks + "<span>Adrenaline Rushes left/Long Rest (Strength Mod)</span>"
+sprint = checks + "<span>Veteran Sprinter uses left/Short Rest (Strength Mod)</span>"
 
 $("#rush").html(rush);
 $("#sprint").html(sprint);
@@ -61,8 +66,10 @@ function updateCon () {
 var freeze = "",
 repair = "";
 
-freeze = "<p>" + Con + " Freezing Touches/Short Rest (Constitution Mod)</p>"
-repair = "<p>" + Con + " Self-Repairs/Short Rest (Constitution Mod)</p>"
+var checks = getChecks(Con);
+
+freeze = checks + "<span>Freezing Touches/Short Rest (Constitution Mod)</span>"
+repair = checks + "<span>Self-Repairs/Short Rest (Constitution Mod)</span>"
 
 $("#freeze").html(freeze);
 $("#repair").html(repair);
@@ -72,13 +79,20 @@ updateCon();
 recovery();
 function updateCha () {
 var commentator = "";
+var checks = getChecks(Cha);
 
-commentator = "<p>" + Cha + " Commentator uses/Long Rest (Charisma Mod)</p>"
+commentator = checks + "<span>Commentator uses/Long Rest (Charisma Mod)</span>"
   $("#commentator").html(commentator);
 }
 updateCha();
 
-
+function getChecks(num) {
+  var checks = "";
+  for (let i=0; i<num; i++) {
+    checks += '<input class="form-check-input dynamic-check" type="checkbox">';
+  }
+  return checks;
+}
 
 function countUp() {
     var SE = document.getElementById('currentSE');

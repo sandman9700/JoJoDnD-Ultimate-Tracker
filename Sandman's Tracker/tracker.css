@@ -114,6 +114,10 @@
     display: grid;
     grid-template-columns: auto auto auto;
   }
+
+  #statAbilities.toggleFlex {
+    grid-template-columns: auto auto;
+  }
   
   .off {
     color: red;
@@ -201,3 +205,11 @@
     .listtt {
       margin-top: 6.85rem;
     }
+
+.dynamic-check {
+  margin: 4px;
+}
+
+.dynamic-check:last-of-type {
+  margin-right: 8px;
+}
