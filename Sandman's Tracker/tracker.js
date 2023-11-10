@@ -210,7 +210,7 @@ $("#RipSub").click(function() {
 function recovery () {
 var recov = "";
 
-recov = "<li>Recovery Breathing (" + Con + ")</li>"
+recov = "Recovery Breathing (+" + Con + ")"
   $("#Recover").html(recov);
 }
 recovery();

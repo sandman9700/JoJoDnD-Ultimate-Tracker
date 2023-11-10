@@ -193,17 +193,13 @@
     right: 39%;
   }
   
-  #healthText, .listtt {
+  #healthText {
     float: right;
   }
   
   #inspiration {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    }
-    
-    .listtt {
-      margin-top: 6.85rem;
     }
 
 .dynamic-check {
@@ -222,4 +218,43 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.content:first-of-type {
+  margin-top: 75px;
+}
+
+.PBSelect, .strSelect, .conSelect, .chaSelect {
+  margin-bottom: 4px;
+  width: 250px;
+}
+
+#rippleList {
+  column-count: 2;
+}
+
+@media (max-width: 850px) {
+  div.toggleFlex {
+    grid-template-columns: auto auto;
+  }
+
+  #statAbilities.toggleFlex {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  #navTitle {
+    right: 10%;
+  }
+}
+
+@media (max-width: 550px) {
+  div.toggleFlex {
+    grid-template-columns: auto;
+  }
+
+  .contentz {
+    width: 100%;
+  }
 }
