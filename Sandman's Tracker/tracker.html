@@ -231,8 +231,8 @@
       </h4>
       <div class="btn-group">
         <input id="currentSE" class="bg-warning" type="text" placeholder="Enter Stand Energy" value="10">
-        <button type="button" class="btn btn-warning" onclick="countUp()">+</button>
-        <button type="button" class="btn btn-warning" onclick="countDown()">-</button>
+        <button type="button" class="btn btn-warning" onclick="countUp('currentSE')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentSE')">-</button>
       </div>
       <ul>
         <li>Custom Ability (1 SE)</li>
@@ -303,8 +303,8 @@
 
       <div class="btn-group">
         <input id="currentGrudge" class="bg-warning" type="text" placeholder="Enter Grudge Points" value="1">
-        <button type="button" class="btn btn-warning" onclick="countUp3()">+</button>
-        <button type="button" class="btn btn-warning" onclick="countDown3()">-</button>
+        <button type="button" class="btn btn-warning" onclick="countUp('currentGrudge')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentGrudge')">-</button>
       </div>
       <ul>
         <li>1 Point: You may use the Attack Action on your Turn, summon your Stand to assist you with a single Skill Check, use your Stand Ability once, or summon it to take hits and assist you with Saving Throws, until the start of your next Turn.</li>
@@ -373,18 +373,18 @@
       </div>
       <div class="btn-group">
         <input id="currentHealth" class="bg-warning center" type="text" placeholder="Enter Hit Points" value="10">
-        <button type="button" class="btn btn-warning" onclick="countUp4()">+ (Health)</button>
-        <button type="button" class="btn btn-warning" onclick="countDown4()">- (Health)</button>
+        <button type="button" class="btn btn-warning" onclick="countUp('currentHealth')">+ (Health)</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentHealth')">- (Health)</button>
       </div>
       <div class="btn-group">
         <input id="currentDR" class="bg-warning center" type="text" placeholder="Enter Stand Damage Reduction" value="1">
-        <button type="button" class="btn btn-warning" onclick="countUp5()">+ (Damge Reduction)</button>
-        <button type="button" class="btn btn-warning" onclick="countDown5()">- (Damge Reduction)</button>
+        <button type="button" class="btn btn-warning" onclick="countUp('currentDR')">+ (Damge Reduction)</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentDR')">- (Damge Reduction)</button>
       </div>
       <div class="btn-group">
         <input id="currentScarflesh" class="bg-warning center" type="text" placeholder="Enter Scarflesh" value="1">
-        <button type="button" class="btn btn-warning" onclick="countUp6()">+ (Scarflesh)</button>
-        <button type="button" class="btn btn-warning" onclick="countDown6()">- (Scarflesh)</button>
+        <button type="button" class="btn btn-warning" onclick="countUp('currentScarflesh')">+ (Scarflesh)</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentScarflesh')">- (Scarflesh)</button>
       </div>
       <div id="Scarflesh"></div>
 

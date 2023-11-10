@@ -94,57 +94,14 @@ function getChecks(num) {
   return checks;
 }
 
-function countUp() {
-    var SE = document.getElementById('currentSE');
-   var i = parseInt(SE.value, 10);
-   SE.value++;
-  updateSE();
+function countUp(id) {
+  var elem = $("#" + id);
+  elem.val(parseInt(elem.val()) + 1);
 }
 
-function countDown() {
-     var SE = document.getElementById('currentSE');
-   var i = parseInt(SE.value, 10);
-  SE.value--
-  updateSE();
-}
-
-
-function countUp3() {
-    var Grudge = document.getElementById('currentGrudge');
-   var g = parseInt(Grudge.value, 10);
-   Grudge.value++;
-  updateGrudge();
-}
-
-function countDown3() {
-     var Grudge = document.getElementById('currentGrudge');
-   var g = parseInt(Grudge.value, 10);
-  Grudge.value--
-  updateGrudge();
-}
-
-function countUp4() {
-    var HP = document.getElementById('currentHealth');
-   var h = parseInt(HP.value, 10);
-   HP.value++;
-}
-
-function countDown4() {
-     var HP = document.getElementById('currentHealth');
-   var h = parseInt(HP.value, 10);
-  HP.value--
-}
-
-function countUp5() {
-    var DR = document.getElementById('currentDR');
-   var d = parseInt(DR.value, 10);
-   DR.value++;
-}
-
-function countDown5() {
-     var DR = document.getElementById('currentDR');
-   var d = parseInt(DR.value, 10);
-  DR.value--
+function countDown(id) {
+  var elem = $("#" + id);
+  elem.val(parseInt(elem.val()) - 1);
 }
 
 function setScar () {
@@ -152,21 +109,6 @@ function setScar () {
 $("#Scarflesh").html(sca)
 }
 setScar();
-function countUp6() {
-    var Scar = document.getElementById('currentScarflesh');
-   var s = parseInt(Scar.value, 10);
-   Scar.value++;
-}
-
-function countDown6() {
-     var Scar = document.getElementById('currentScarflesh');
-   var s = parseInt(Scar.value, 10);
-  Scar.value--
-
-}
-
-
-
 
 var lvl = "1";
 var baseNRG = 0;
