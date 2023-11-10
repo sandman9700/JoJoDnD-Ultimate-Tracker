@@ -212,7 +212,7 @@
         <option value="10">+10 Charisma Modifier</option>
       </select>
 
-      <div class="toggleFlex">
+      <div id="statAbilities" class="toggleFlex">
 
 
         <div id="rush"></div>
@@ -230,9 +230,9 @@
         Stand Energy Tracker
       </h4>
       <div class="btn-group">
-        <input id="currentSE" class="bg-warning" type="text" placeholder="Enter Stand Energy" value="10">
-        <button type="button" class="btn btn-warning" onclick="countUp()">+</button>
-        <button type="button" class="btn btn-warning" onclick="countDown()">-</button>
+        <input id="currentSE" class="bg-warning" type="number" placeholder="Enter Stand Energy" value="10">
+        <button type="button" class="btn btn-warning" onclick="countUp('currentSE')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentSE')">-</button>
       </div>
       <ul>
         <li>Custom Ability (1 SE)</li>
@@ -247,17 +247,6 @@
       <h4 class="display-heading">
         Ripple Energy Tracker
       </h4>
-      <ul class="listtt">
-        <div id="Recover"></div>
-        <li>Ripple Perception (1)</li>
-        <li>Ripple Posession (3)</li>
-        <li>Ripple Pressure (1)</li>
-        <li>Rippling Weapon (1)</li>
-        <li>Scarlet Overdrive (2)</li>
-        <li>Sendo Overdrive (1)</li>
-        <li>Sunlight Yellow Overdrive (2)</li>
-        <li>Zoom Punch (1)</li>
-      </ul>
       <div id="Ripple" class="contentz"></div>
       <div class="btn-group">
         <select class=" riplevelSelect form-select bg-warning">
@@ -285,7 +274,16 @@
         </select> <button type="button" class="btn btn-warning" id="RipAdd">+</button>
         <button type="button" class="btn btn-warning" id="RipSub">-</button>
       </div>
-      <ul>
+      <ul id="rippleList">
+        <li id="Recover"></li>
+        <li>Ripple Perception (1)</li>
+        <li>Ripple Posession (3)</li>
+        <li>Ripple Pressure (1)</li>
+        <li>Rippling Weapon (1)</li>
+        <li>Scarlet Overdrive (2)</li>
+        <li>Sendo Overdrive (1)</li>
+        <li>Sunlight Yellow Overdrive (2)</li>
+        <li>Zoom Punch (1)</li>
         <li>Conductor Shield (1)</li>
         <li>Custom Ripple Ability (Varies)</li>
         <li>Deep Pass Overdrive (All)</li>
@@ -302,9 +300,9 @@
       </h4>
 
       <div class="btn-group">
-        <input id="currentGrudge" class="bg-warning" type="text" placeholder="Enter Grudge Points" value="1">
-        <button type="button" class="btn btn-warning" onclick="countUp3()">+</button>
-        <button type="button" class="btn btn-warning" onclick="countDown3()">-</button>
+        <input id="currentGrudge" class="bg-warning" type="number" placeholder="Enter Grudge Points" value="1">
+        <button type="button" class="btn btn-warning" onclick="countUp('currentGrudge')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentGrudge')">-</button>
       </div>
       <ul>
         <li>1 Point: You may use the Attack Action on your Turn, summon your Stand to assist you with a single Skill Check, use your Stand Ability once, or summon it to take hits and assist you with Saving Throws, until the start of your next Turn.</li>
@@ -371,20 +369,25 @@
           <li>You gain Damage Reduction equal to twice your Constitution Modifier at the top of Initiative every round. This Damage Reduction doesn't conflict with Stand Damage Reduction, and unlike Stand DR, applies on any hit.</li>
         </ul>
       </div>
+      <label>Current Health:</label><br>
       <div class="btn-group">
-        <input id="currentHealth" class="bg-warning center" type="text" placeholder="Enter Hit Points" value="10">
-        <button type="button" class="btn btn-warning" onclick="countUp4()">+ (Health)</button>
-        <button type="button" class="btn btn-warning" onclick="countDown4()">- (Health)</button>
+        <input id="currentHealth" class="bg-warning center" type="number" placeholder="Enter Hit Points" value="10">
+        <button type="button" class="btn btn-warning" onclick="countUp('currentHealth')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentHealth')">-</button>
       </div>
+      <br>
+      <label>Current Damage Reduction:</label><br>
       <div class="btn-group">
-        <input id="currentDR" class="bg-warning center" type="text" placeholder="Enter Stand Damage Reduction" value="1">
-        <button type="button" class="btn btn-warning" onclick="countUp5()">+ (Damge Reduction)</button>
-        <button type="button" class="btn btn-warning" onclick="countDown5()">- (Damge Reduction)</button>
+        <input id="currentDR" class="bg-warning center" type="number" placeholder="Enter Stand DR" value="1">
+        <button type="button" class="btn btn-warning" onclick="countUp('currentDR')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentDR')">-</button>
       </div>
+      <br>
+      <label>Current Scarflesh:</label><br>
       <div class="btn-group">
-        <input id="currentScarflesh" class="bg-warning center" type="text" placeholder="Enter Scarflesh" value="1">
-        <button type="button" class="btn btn-warning" onclick="countUp6()">+ (Scarflesh)</button>
-        <button type="button" class="btn btn-warning" onclick="countDown6()">- (Scarflesh)</button>
+        <input id="currentScarflesh" class="bg-warning center" type="number" placeholder="Enter Scarflesh" value="1">
+        <button type="button" class="btn btn-warning" onclick="countUp('currentScarflesh')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('currentScarflesh')">-</button>
       </div>
       <div id="Scarflesh"></div>
 
@@ -394,92 +397,10 @@
       <h4 class="display-heading">
         Inspiration
       </h4>
-      <div class="btn-group" id="inspiration">
-
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="" value="" aria-label="...">
-        </div>
+      <div class="btn-group">
+        <input id="inspiration" class="bg-warning center" type="number" placeholder="Enter Inspiration" value="0">
+        <button type="button" class="btn btn-warning" onclick="countUp('inspiration')">+</button>
+        <button type="button" class="btn btn-warning" onclick="countDown('inspiration')">-</button>
       </div>
     </div>
   </body>
