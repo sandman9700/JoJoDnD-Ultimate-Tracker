@@ -33,17 +33,21 @@ function updatePB() {
   var checksWhole = getChecks(PB);
   var checksHalf = getChecks(Math.floor(PB / 2));
 
-  heavySleeper += checksHalf + "<span>Heavy Sleeper uses</span>"
-  improvise += checksWhole + "<span>Improvised Healing uses</span>"
-  motivated += checksHalf + "<span>Motivated uses</span>"
-  luck += checksHalf + "<span>Stroke of Luck uses</span>"
-  subtle += checksWhole + "<span>Subtle Assistance uses</span>"
+  heavySleeper += checksHalf + "<span>Heavy Sleeper uses/Long Rest</span>"
+  improvise += checksWhole + "<span>Improvised Healing uses/Short Rest*</span>"
+  motivated += checksHalf + "<span>Motivated uses/Long Rest</span>"
+  luck += checksWhole + "<span>Stroke of Luck uses/Long Rest</span>"
+  subtle = checksWhole + "<span>Subtle Assistance uses/Long Rest</span>"
+  unstoppable = checksWhole + "<span>Unstoppable Willpower uses/Long Rest</span>"
+  
 
   $("#heavySleeper").html(heavySleeper);
   $("#improvise").html(improvise);
   $("#motivated").html(motivated);
   $("#luck").html(luck);
   $("#subtle").html(subtle);
+  $("#unstoppable").html(unstoppable);
+
 
 }
 updatePB();
