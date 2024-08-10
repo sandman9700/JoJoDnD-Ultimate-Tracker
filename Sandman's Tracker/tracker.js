@@ -10,10 +10,28 @@ $('.strSelect').change(function() {
   updateStr();
 });
 
+var Dex = 1;
+$('.dexSelect').change(function() {
+  Dex = parseInt($('.dexSelect').val());
+  updateDex();
+});
+
 var Con = 1;
 $('.conSelect').change(function() {
   Con = parseInt($('.conSelect').val());
   updateCon();
+});
+
+var Int = 1;
+$('.intSelect').change(function() {
+  Int = parseInt($('.intSelect').val());
+  updateInt();
+});
+
+var Wis = 1;
+$('.wisSelect').change(function() {
+  Wis = parseInt($('.wisSelect').val());
+  updateWis();
 });
 
 var Cha = 1;
@@ -22,13 +40,20 @@ $('.chaSelect').change(function() {
   updateCha();
 });
 
+var Lvl = 1;
+$('#levelSelect').change(function() {
+  Lvl = parseInt($('#levelSelect').val());
+  updateLvl();
+});
 
 function updatePB() {
   var heavySleeper = "",
     improvise = "",
     motivated = "",
     luck = "",
-    subtle = "";
+    subtle = "",
+    elementalist = "",
+    focus = "";
     
   var checksWhole = getChecks(PB);
   var checksHalf = getChecks(Math.floor(PB / 2));
@@ -39,6 +64,8 @@ function updatePB() {
   luck += checksWhole + "<span>Stroke of Luck uses/Long Rest</span>"
   subtle = checksWhole + "<span>Subtle Assistance uses/Long Rest</span>"
   unstoppable = checksWhole + "<span>Unstoppable Willpower uses/Long Rest</span>"
+  elementalist = checksWhole + "<span>Elementalist uses/Long Rest</span>"
+  focus = "You have <b><i><u>" + (Wis * PB) + "</u></i></b> Focus (Wisdom Mod * PB)"
   
 
   $("#heavySleeper").html(heavySleeper);
@@ -47,6 +74,8 @@ function updatePB() {
   $("#luck").html(luck);
   $("#subtle").html(subtle);
   $("#unstoppable").html(unstoppable);
+  $("#elementalist").html(elementalist);
+  $("#focusMax").html(focus);
 
 
 }
@@ -66,6 +95,10 @@ $("#sprint").html(sprint);
 }
 updateStr();
 
+function updateDex() {
+
+}
+
 function updateCon () {
 var freeze = "",
 repair = "";
@@ -81,14 +114,57 @@ recovery();
 }
 updateCon();
 recovery();
+
+function updateInt (){
+  var sharp = "",
+  overhealI = "",
+  tactician = "";
+  var checks = getChecks(Int);
+
+  sharp = checks + "<span>Sharp Mind uses/Long Rest (Intelligence Mod)</span>"
+  overhealI = checks + "<span>Overheal uses/Long Rest (Intelligence Mod)</span>"
+  tactician = "<b><i><u>" + Int + "</u></i></b> Tactician dice (" + Int + "d8). (Intelligence Mod)"
+  $("#sharp").html(sharp);
+  $("#tactician").html(tactician);
+  $("#overhealInt").html(overhealI);
+}
+updateInt();
+
+function updateWis (){
+  var overhealW = "",
+  focus = "";
+  var checks = getChecks(Wis);
+
+  overhealW = checks + "<span>Overheal uses/Long Rest (Wisdom Mod)</span>"
+  focus = "You have <b><i><u>" + (Wis * PB) + "</u></i></b> Focus (Wisdom Mod * PB)"
+  $("#overhealWis").html(overhealW);
+  $("#focusMax").html(focus);
+}
+updateWis();
+
 function updateCha () {
-var commentator = "";
+var commentator = "",
+hypnosis = "",
+powerful ="",
+consulDice ="";
 var checks = getChecks(Cha);
 
 commentator = checks + "<span>Commentator uses/Long Rest (Charisma Mod)</span>"
-  $("#commentator").html(commentator);
+consulDice = "Consul gets <b><i><u>" + (Cha + Lvl) + "</u></i></b> Encouragement Dice/Long Rest (Charisma Mod + Consul Level)"
+hypnosis = checks + "<span>Hypnosis uses/Long Rest (Charisma Mod)"
+powerful = checks + "<span>Powerful Prescence uses/Long Rest (Charisma Mod)"
+$("#commentator").html(commentator);
+$("#consul").html(consulDice);
+$("#hypnosis").html(hypnosis);
+$("#powerful").html(powerful);
 }
 updateCha();
+
+function updateLvl (){
+  consulDice = "Consul gets <b><i><u>" + (Cha + Lvl) + "</u></i></b> Encouragement Dice"
+  $("#consul").html(consulDice);
+}
+updateLvl();
 
 function getChecks(num) {
   var checks = "";

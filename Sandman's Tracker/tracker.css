@@ -224,7 +224,7 @@ input[type=number] {
   margin-top: 75px;
 }
 
-.PBSelect, .strSelect, .conSelect, .chaSelect {
+.PBSelect, .strSelect, .dexSelect, .conSelect, .intSelect, .wisSelect, .chaSelect, .low-width {
   margin-bottom: 4px;
   width: 250px;
 }
@@ -257,4 +257,17 @@ input[type=number] {
   .contentz {
     width: 100%;
   }
+}
+
+a {
+  color: rgb(10, 0, 155);
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(17, 0, 255);
+}
+
+.low-width {
+  width: 250px;
 }

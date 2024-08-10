@@ -113,12 +113,6 @@
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="">
         <label class="form-check-label" for="">
-          Hypnosis
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="">
-        <label class="form-check-label" for="">
           Regenerative Surge
         </label>
       </div>
@@ -135,7 +129,7 @@
           </label>
         </div>
       </div>
-      
+
     </div>
   </div>
 
@@ -166,11 +160,21 @@
           Duelist's Agility
         </label>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="">
-        <label class="form-check-label" for="">
-          Level Headed
-        </label>
+      <div class="btn-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+          </label>
+          <input class="form-check-input" type="checkbox" value="" id="">
+          <label class="form-check-label" for="">
+            Level Headed
+          </label>
+        </div>
       </div>
       <div class="btn-group">
         <div class="form-check">
@@ -266,14 +270,15 @@
       <option value="9">+9</option>
       <option value="10">+10</option>
     </select>
-    <div class="toggleFlex">
-      <div id="heavySleeper"></div>
-      <div id="improvise"></div>
-      <div id="motivated"></div>
-      <div id="luck"></div>
-      <div id="subtle"></div>
-      <div id="unstoppable"></div>
-    </div>
+
+    <div id="elementalist"></div>
+    <div id="heavySleeper"></div>
+    <div id="improvise"></div>
+    <div id="motivated"></div>
+    <div id="luck"></div>
+    <div id="subtle"></div>
+    <div id="unstoppable"></div>
+
     <small><i>*extras do <b>not</b> roll over</i></small>
   </div>
 
@@ -284,6 +289,29 @@
     <p>
       <i><small><b>*Note:</b> if the mod is lower than +1 put it as +1</small></i>
     </p>
+    <select id="levelSelect" class=" levelSelect form-select bg-warning low-width">
+      <option value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4">Level 4</option>
+      <option value="5">Level 5</option>
+      <option value="6">Level 6</option>
+      <option value="7">Level 7</option>
+      <option value="8">Level 8</option>
+      <option value="9">Level 9</option>
+      <option value="10">Level 10</option>
+      <option value="11">Level 11</option>
+      <option value="12">Level 12</option>
+      <option value="13">Level 13</option>
+      <option value="14">Level 14</option>
+      <option value="15">Level 15</option>
+      <option value="16">Level 16</option>
+      <option value="17">Level 17</option>
+      <option value="18">Level 18</option>
+      <option value="19">Level 19</option>
+      <option value="20">Level 20</option>
+
+    </select>
     <select class="form-select bg-warning strSelect" aria-label="Default select example">
       <option value="1">+1 Strength Modifier</option>
       <option value="2">+2 Strength Modifier</option>
@@ -296,6 +324,18 @@
       <option value="9">+9 Strength Modifier</option>
       <option value="10">+10 Strength Modifier</option>
     </select>
+    <select class="form-select bg-warning dexSelect" aria-label="Default select example">
+      <option value="1">+1 Dexterity Modifier</option>
+      <option value="2">+2 Dexterity Modifier</option>
+      <option value="3">+3 Dexterity Modifier</option>
+      <option value="4">+4 Dexterity Modifier</option>
+      <option value="5">+5 Dexterity Modifier</option>
+      <option value="6">+6 Dexterity Modifier</option>
+      <option value="7">+7 Dexterity Modifier</option>
+      <option value="8">+8 Dexterity Modifier</option>
+      <option value="9">+9 Dexterity Modifier</option>
+      <option value="10">+10 Dexterity Modifier</option>
+    </select>
     <select class="form-select bg-warning conSelect" aria-label="Default select example">
       <option value="1">+1 Constitution Modifier</option>
       <option value="2">+2 Constitution Modifier</option>
@@ -307,6 +347,30 @@
       <option value="8">+8 Constitution Modifier</option>
       <option value="9">+9 Constitution Modifier</option>
       <option value="10">+10 Constitution Modifier</option>
+    </select>
+    <select class="form-select bg-warning intSelect" aria-label="Default select example">
+      <option value="1">+1 Intelligence Modifier</option>
+      <option value="2">+2 Intelligence Modifier</option>
+      <option value="3">+3 Intelligence Modifier</option>
+      <option value="4">+4 Intelligence Modifier</option>
+      <option value="5">+5 Intelligence Modifier</option>
+      <option value="6">+6 Intelligence Modifier</option>
+      <option value="7">+7 Intelligence Modifier</option>
+      <option value="8">+8 Intelligence Modifier</option>
+      <option value="9">+9 Intelligence Modifier</option>
+      <option value="10">+10 Intelligence Modifier</option>
+    </select>
+    <select class="form-select bg-warning wisSelect" aria-label="Default select example">
+      <option value="1">+1 Wisdom Modifier</option>
+      <option value="2">+2 Wisdom Modifier</option>
+      <option value="3">+3 Wisdom Modifier</option>
+      <option value="4">+4 Wisdom Modifier</option>
+      <option value="5">+5 Wisdom Modifier</option>
+      <option value="6">+6 Wisdom Modifier</option>
+      <option value="7">+7 Wisdom Modifier</option>
+      <option value="8">+8 Wisdom Modifier</option>
+      <option value="9">+9 Wisdom Modifier</option>
+      <option value="10">+10 Wisdom Modifier</option>
     </select>
     <select class="form-select bg-warning chaSelect" aria-label="Default select example">
       <option value="1">+1 Charisma Modifier</option>
@@ -328,9 +392,14 @@
       <div id="sprint"></div>
       <div id="freeze"></div>
       <div id="repair"></div>
-      <div id="commentator">
-
-      </div>
+      <div id="sharp"></div>
+      <div id="overhealInt"></div>
+      <div id="overhealWis"></div>
+      <div id="commentator"></div>
+      <div id="hypnosis"></div>
+      <div id="powerful"></div>
+      <div id="tactician"></div>
+      <div id="consul"></div>
     </div>
   </div>
 
@@ -409,10 +478,11 @@
     </h4>
 
     <div class="btn-group">
-      <input id="currentGrudge" class="bg-warning" type="number" placeholder="Enter Grudge Points" value="1" maxlength="5">
+      <input id="currentGrudge" class="bg-warning" type="number" placeholder="Enter Grudge Points" value="1"
+        maxlength="5">
       <button type="button" class="btn btn-warning" onclick="countUp('currentGrudge')">+</button>
       <button type="button" class="btn btn-warning" onclick="countDown('currentGrudge')">-</button>
-      
+
     </div>
     <ul>
       <li>1 Point: You may use the Attack Action on your Turn, summon your Stand to assist you with a single Skill
@@ -533,6 +603,25 @@
       <button type="button" class="btn btn-warning" onclick="countUp('artisan')">+</button>
       <button type="button" class="btn btn-warning" onclick="countDown('artisan')">-</button>
     </div>
+  </div>
+  <div class="content">
+    <h4 class="display-heading">
+      Focus
+    </h4>
+    <div class="btn-group">
+      <input id="focus" class="bg-warning center" type="number" placeholder="Enter Focus" value="0">
+      <button type="button" class="btn btn-warning" onclick="countUp('focus')">+</button>
+      <button type="button" class="btn btn-warning" onclick="countDown('focus')">-</button>
+    </div>
+    <div id="focusMax"></div>
+  </div>
+  <div class="content">
+    <h4 class="display-heading">Credits</h4>
+    <ul>
+      <li>Thank you Maggy for giving me all the info</li>
+      <li>Thank you <a href="https://discord.gg/nmgSjPW8xs">Xenotater</a> for helping me with code (And making
+        CSS/Theme)</li>
+    </ul>
   </div>
 </body>
 
